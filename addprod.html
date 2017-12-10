@@ -1,0 +1,86 @@
+<?php
+include 'connection.php';
+session_start();
+include 'connection.php';
+if($_SESSION["whostatus"]=="provider")
+{}
+else
+{ header("location:index.html");
+session_destroy();
+echo "destroyed";
+}
+
+
+?>
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<link href="css/style.css" rel='stylesheet' type='text/css' />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<!--webfonts-->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text.css'/>
+		<!--//webfonts-->
+</head>
+<body>
+	<div class="main">
+		<div class="header" >
+			<h1>Hello Seller Add a Product you want to sell!</h1>
+		</div>
+		<p>Have A Great Day Ahead. </p>
+			<form action="addprodtab.php" method="post" enctype="multipart/form-data" >
+				<ul class="left-form">
+					<h2>Name:</h2>
+					<li>
+						<input type="text"   placeholder="Name of the product" name="pname" id="pname" required/>
+						<a href="#" class="icon ticker"> </a>
+						<div class="clear"> </div>
+					</li> 
+					<li>
+						<input type="file"   placeholder="Image of the product" name="image" id="image" required/>						
+						<a href="#" class="icon ticker"> </a>
+						<div class="clear"> </div>
+					</li> 
+					<li>
+						<input type="text"   placeholder="Enter Price" name="price"  id="price" required/>
+						<a href="#" class="icon ticker"> </a>
+						<div class="clear"> </div>
+					</li> 
+					<li>
+						<input type="text"   placeholder="Enter size" name="size" id="size" required/>
+						<a href="#" class="icon into"> </a>
+						<div class="clear"> </div>
+					</li> 
+					<li>
+						<input type="text"   placeholder="Enter color" name="color" id="color" required/>
+						<a href="#" class="icon into"> </a>
+						<div class="clear"> </div>
+					</li> 
+					<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>Please inform me of upcoming  w3layouts, Promotions and news</label>
+					<input type="submit" onclick="myFunction()" value="Add Product">
+						<div class="clear"> </div>
+				</ul>
+			</form>
+		
+			
+		</div>
+			<!-----start-copyright---->
+   					<div class="copy-right">
+						<p><a href="index.html">Logout</a></p> 
+					</div>
+				<!-----//end-copyright---->
+<script>
+function myFunction(){
+		window.alert('product added successfully');
+}
+</script>
+	
+</body>
+</html>
